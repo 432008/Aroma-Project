@@ -1,0 +1,866 @@
+/* =========================================
+   AROMA - PERFUME WEBSITE
+   Main Stylesheet
+========================================= */
+
+
+/* =========================================
+   1. GLOBAL VARIABLES
+========================================= */
+
+:root {
+    --dark-brown: #3B2723;
+    --coffee-brown: #6F4E37;
+    --beige: #F5EFE6;
+    --cream: #FFFDF8;
+    --gold: #C9A227;
+    --white: #FFFFFF;
+    --text-dark: #292321;
+    --light-border: #e8dfd2;
+}
+
+
+/* =========================================
+   2. GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-brown);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   3. NAVBAR
+========================================= */
+
+.aroma-navbar {
+    background-color: var(--dark-brown);
+    padding: 18px 0;
+    border-bottom: 2px solid var(--gold);
+}
+
+.aroma-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--white) !important;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 15px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gold) !important;
+}
+
+
+/* Mobile navbar button */
+
+.navbar-toggler {
+    border: 1px solid var(--gold);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =========================================
+   4. GENERAL BUTTONS
+========================================= */
+
+.aroma-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.aroma-btn-primary {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    border: 1px solid var(--dark-brown);
+}
+
+.aroma-btn-primary:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.aroma-btn-gold {
+    background-color: var(--gold);
+    color: var(--white);
+    border: 1px solid var(--gold);
+}
+
+.aroma-btn-gold:hover {
+    background-color: var(--dark-brown);
+    border-color: var(--dark-brown);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.aroma-btn-outline {
+    background-color: transparent;
+    color: var(--dark-brown);
+    border: 1px solid var(--dark-brown);
+}
+
+.aroma-btn-outline:hover {
+    background-color: var(--dark-brown);
+    color: var(--white);
+}
+
+
+/* =========================================
+   5. HERO SECTION
+========================================= */
+
+.hero-section {
+    background-color: var(--beige);
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.hero-content {
+    padding-right: 30px;
+}
+
+.hero-small-title {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    font-size: 16px;
+    color: #665b56;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 470px;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(59, 39, 35, 0.15);
+}
+
+
+/* =========================================
+   6. SECTION COMMON STYLES
+========================================= */
+
+.section-padding {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-heading {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #706661;
+}
+
+
+/* =========================================
+   7. PRODUCT CARDS
+========================================= */
+
+.product-card {
+    height: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(59, 39, 35, 0.12);
+}
+
+.product-image-wrapper {
+    background-color: var(--beige);
+    padding: 25px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.04);
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-category {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.product-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #756b66;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--dark-brown);
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   8. FEATURE BOXES
+========================================= */
+
+.feature-box {
+    text-align: center;
+    padding: 35px 25px;
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    border-radius: 8px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: var(--beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 24px;
+}
+
+.feature-title {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.feature-text {
+    color: #756b66;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   9. CTA SECTION
+========================================= */
+
+.cta-section {
+    background-color: var(--dark-brown);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-title {
+    color: var(--white);
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.cta-text {
+    color: #ddd2ca;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+
+/* =========================================
+   10. PAGE HEADER
+========================================= */
+
+.page-header {
+    background-color: var(--beige);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.page-header-title {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.page-header-text {
+    color: #706661;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   11. ABOUT PAGE
+========================================= */
+
+.about-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-content {
+    padding-left: 30px;
+}
+
+.about-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    color: #706661;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   12. PHILOSOPHY CARDS
+========================================= */
+
+.philosophy-card {
+    text-align: center;
+    padding: 40px 25px;
+    border: 1px solid var(--light-border);
+    background-color: var(--white);
+    border-radius: 8px;
+    height: 100%;
+}
+
+.philosophy-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.philosophy-card p {
+    color: #706661;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   13. STATISTICS
+========================================= */
+
+.stats-section {
+    background-color: var(--beige);
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--dark-brown);
+}
+
+.stat-label {
+    color: #706661;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   14. FILTER BUTTONS
+========================================= */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+
+.filter-btn {
+    padding: 9px 22px;
+    background-color: transparent;
+    color: var(--dark-brown);
+    border: 1px solid var(--dark-brown);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--dark-brown);
+    color: var(--white);
+}
+
+
+/* =========================================
+   15. PRODUCT DETAILS
+========================================= */
+
+.details-image-wrapper {
+    background-color: var(--beige);
+    padding: 35px;
+    border-radius: 8px;
+}
+
+.details-image {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.details-content {
+    padding-left: 30px;
+}
+
+.details-category {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.details-title {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.details-price {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--coffee-brown);
+    margin-bottom: 20px;
+}
+
+.details-description {
+    color: #706661;
+    margin-bottom: 25px;
+}
+
+.details-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* Fragrance notes */
+
+.notes-box {
+    background-color: var(--beige);
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.notes-box h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.note-item {
+    margin-bottom: 10px;
+}
+
+.note-label {
+    font-weight: 600;
+    color: var(--dark-brown);
+}
+
+.note-value {
+    color: #706661;
+}
+
+
+/* =========================================
+   16. CONTACT PAGE
+========================================= */
+
+.contact-info {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.contact-info h3 {
+    color: var(--white);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-label {
+    color: var(--gold);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.contact-value {
+    color: #eee5de;
+    margin-top: 5px;
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: 40px;
+    border: 1px solid var(--light-border);
+    border-radius: 8px;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark-brown);
+}
+
+.form-control {
+    border: 1px solid #ddd3c8;
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.form-control:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.15rem rgba(201, 162, 39, 0.15);
+}
+
+
+/* =========================================
+   17. ALERTS
+========================================= */
+
+.aroma-alert {
+    border-radius: 4px;
+    border: none;
+    padding: 15px 20px;
+}
+
+
+/* =========================================
+   18. FOOTER
+========================================= */
+
+.aroma-footer {
+    background-color: var(--dark-brown);
+    color: #ddd2ca;
+    padding: 70px 0 0;
+}
+
+.footer-logo {
+    color: var(--white);
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.aroma-footer h5 {
+    color: var(--white);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.aroma-footer p {
+    color: #cfc3bb;
+    font-size: 13px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #cfc3bb;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+
+/* =========================================
+   19. SIMPLE FADE ANIMATION
+========================================= */
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   20. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        min-height: auto;
+        padding: 70px 0;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 45px;
+    }
+
+    .about-content {
+        padding-left: 0;
+        margin-top: 35px;
+    }
+
+    .details-content {
+        padding-left: 0;
+        margin-top: 35px;
+    }
+
+    .navbar-nav {
+        padding-top: 15px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .section-heading {
+        font-size: 34px;
+    }
+
+    .page-header {
+        padding: 60px 15px;
+    }
+
+    .page-header-title {
+        font-size: 38px;
+    }
+
+    .cta-title {
+        font-size: 34px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .details-image {
+        height: 400px;
+    }
+
+    .details-title {
+        font-size: 38px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .aroma-logo {
+        font-size: 25px;
+    }
+
+    .hero-section {
+        padding: 55px 0;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .aroma-btn {
+        text-align: center;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+
+}
