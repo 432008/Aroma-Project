@@ -1,186 +1,235 @@
-# Aroma — Luxury Perfume E-Commerce
+# 🌸 Aroma — Fine Fragrances
 
-A full-stack **Laravel 12** e-commerce web application for a luxury perfume brand, featuring a dark gold-on-black editorial storefront and a complete admin dashboard.
+<p align="center">
+  <strong>An elegant Laravel-powered perfume e-commerce experience.</strong>
+</p>
 
-![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white)
-![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green)
+<p align="center">
+  Discover fragrances, explore perfume collections, and enjoy a seamless online shopping experience with Aroma.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-Web%20Framework-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+  <img src="https://img.shields.io/badge/PHP-Backend-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge" alt="Project status">
+</p>
+
+<p align="center">
+  <a href="https://github.com/432008/Aroma-Project">View Repository</a>
+</p>
 
 ---
 
-## 📖 About
+## 📖 About the Project
 
-**Aroma** is a portfolio-grade perfume store built from scratch with Laravel. It covers the entire shopping journey — browsing collections, searching fragrances, product reviews, cart, checkout, order history — plus a role-protected admin area for managing products, categories, orders, users, messages and reviews.
+**Aroma — Fine Fragrances** is a Laravel-based perfume e-commerce web application designed to provide customers with a convenient way to browse fragrances and shop online.
 
-The UI follows a luxury editorial direction (charcoal + gold, serif display type) with an accessible, responsive layout.
+The application includes customer-facing shopping pages and administrative interfaces for managing products, categories, orders, users, customer messages, and reviews.
 
----
+This project demonstrates the development of a full-stack web application using Laravel, PHP, Blade templates, CSS, and JavaScript.
+
+## 📸 Screenshots
+
+Add screenshots of your actual application in the `docs/screenshots/` directory.
+
+| Home Page | Perfume Collection |
+|---|---|
+| ![Aroma Home Page](docs/screenshots/home.png) | ![Perfume Collection](docs/screenshots/about.png) |
+
+| Product Details | Admin Dashboard |
+|---|---|
+| ![Product Details](docs/screenshots/perfumes.png) | ![Admin Dashboard](docs/screenshots/admin-dashboard.png) |
+
+*Replace these example image paths with your actual screenshot filenames.*
 
 ## ✨ Features
 
-### Storefront
-- **Home page** — hero, featured perfumes, collections, testimonials, newsletter
-- **Perfume catalogue** — listing, keyword search and collection filtering
-- **Product detail** — gallery, notes, price, stock, star ratings and reviews
-- **Collections** — browse by fragrance family (Floral, Woody, Fresh, Oriental, …)
-- **Shopping cart** — add / update quantity / remove
-- **Checkout** — shipping details and order placement
-- **Order history** — order list and full order detail
-- **Customer profile** — update personal details and password
-- **Authentication** — register, login, logout, forgot/reset password
-- **Contact form** and **newsletter subscription**
-- **Informational pages** — Shipping, Returns, Privacy, Terms, FAQs (config-driven)
+### 🛍️ Customer Experience
+- Home page showcasing the Aroma brand.
+- Perfume catalog and fragrance collections.
+- Individual product detail pages.
+- Customer registration and login.
+- Shopping checkout flow.
+- Order history and order details.
+- Customer profile page.
+- Product reviews.
+- Contact page for customer enquiries.
 
-### Admin dashboard (`/admin`)
-- **Dashboard** with store statistics
-- **Products** — full CRUD with image upload
-- **Categories** — full CRUD
-- **Orders** — list, view and update order status
-- **Users** — list, view, change role, delete
-- **Contact messages** — list, view, mark read/unread, delete
-- **Reviews** — approve, reject and delete
+### ⚙️ Admin Dashboard
+- Administrative dashboard.
+- Create, view, edit, and manage products.
+- Organize products using categories.
+- View and manage customer orders.
+- Manage registered users.
+- Review customer messages.
+- Manage product reviews.
 
----
+## 🧰 Technology Stack
 
-## 🧰 Tech Stack
-
-| Layer | Technology |
+| Technology | Purpose |
 |---|---|
-| Backend | Laravel 12, PHP 8.2+ |
-| Database | MySQL |
-| Frontend | Blade, Bootstrap 5 (CDN), Bootstrap Icons |
-| Styling | Custom design-token CSS built with Vite 7 |
-| Interactivity | Vanilla JavaScript (`resources/js/app.js`) |
-| Fonts | Google Fonts — Cormorant Garamond & Montserrat |
+| PHP | Server-side programming |
+| Laravel | Backend framework |
+| Blade | Server-rendered templates |
+| HTML5 | Page structure |
+| CSS3 | Styling and layout |
+| JavaScript | Client-side interactions |
+| MySQL or another supported database | Data storage |
+| Git and GitHub | Version control and source hosting |
 
----
+*Confirm the database and installed frontend tools against your actual project configuration.*
 
-## ✅ Requirements
+## 🚀 Getting Started
 
-- PHP **8.2+** with the usual Laravel extensions (`mbstring`, `openssl`, `pdo`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`, `fileinfo`)
-- [Composer](https://getcomposer.org/)
-- [Node.js](https://nodejs.org/) 18+ and npm
-- MySQL 8 (or MariaDB)
+Follow these steps to run Aroma on your local computer.
 
----
+### Prerequisites
 
-## 🚀 Installation
+Install:
+- PHP compatible with the project's Laravel version
+- Composer
+- A supported database
+- Git
+- Node.js and npm, if required by the frontend build
+
+### 1. Clone the repository
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/aroma.git
-cd aroma
+git clone https://github.com/432008/Aroma-Project.git
+cd Aroma-Project
+```
 
-# 2. Install PHP dependencies
+### 2. Install dependencies
+
+```bash
 composer install
+```
 
-# 3. Create your environment file and app key
+If the project includes a `package.json` file, install the frontend dependencies too:
+
+```bash
+npm install
+```
+
+### 3. Configure the environment
+
+Create a local environment file from the example:
+
+**Windows PowerShell**
+
+```powershell
+Copy-Item .env.example .env
+```
+
+**macOS / Linux**
+
+```bash
 cp .env.example .env
+```
+
+### 4. Generate the application key
+
+```bash
 php artisan key:generate
 ```
 
-Configure your database in `.env`:
+### 5. Configure the database
+
+Open `.env` and enter your local database settings:
 
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=aroma
-DB_USERNAME=root
-DB_PASSWORD=
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
 ```
 
+Create the `aroma` database using your database management tool. Replace the example credentials with your own.
+
+### 6. Run migrations
+
 ```bash
-# 4. Create the database tables and demo data
-php artisan migrate --seed
+php artisan migrate
+```
 
-# 5. Expose uploaded images (creates public/storage -> storage/app/public)
-php artisan storage:link
+Run seeders only if they are available and you have reviewed what data they create:
 
-# 6. Install front-end dependencies and build assets
-npm install
+```bash
+php artisan db:seed
+```
+
+### 7. Build frontend assets
+
+If the project uses Vite or another npm build process, follow its configuration. For a typical Vite setup:
+
+```bash
 npm run build
+```
 
-# 7. Serve the application
+### 8. Start the application
+
+```bash
 php artisan serve
 ```
 
-The site is now available at **http://localhost:8000**.
+Open the local URL shown in your terminal, typically:
 
-> Prefer one command? `composer setup` will install dependencies, copy `.env`, generate the key, migrate, install npm packages and build assets. You still need to run `php artisan storage:link` and `php artisan migrate --seed` manually.
-
-### Development with hot reload
-
-```bash
-composer dev
-```
-
-Runs the PHP server, queue listener, log viewer (`pail`) and Vite dev server together.
-
+http://127.0.0.1:8000
 
 ## 📁 Project Structure
 
-```
-app/
-├── Http/Controllers/        # Storefront + Admin controllers
-├── Http/Middleware/         # Admin access middleware
-└── Models/                  # User, Product, Category, Cart, Order, OrderItem, Review, ContactMessage
-config/
-└── pages.php                # Content for the static info pages
-database/
-├── migrations/              # Schema
-└── seeders/                 # Demo categories, products and admin user
-public/
-├── images/                  # Logo + favicons
-└── storage/                 # Symlink to storage/app/public
-resources/
-├── css/app.css              # Design-token stylesheet
-├── js/app.js                # Cart, filters, toasts, reveal animations
-└── views/
-    ├── layouts/             # Master layout
-    ├── components/          # Navbar, footer, product card, etc.
-    └── admin/               # Admin dashboard screens
-routes/
-└── web.php                  # All application routes
+```text
+Aroma-Project/
+├── app/                  # Application logic
+├── bootstrap/            # Framework bootstrap
+├── config/               # Configuration files
+├── database/             # Migrations and seeders
+├── public/               # Public assets
+├── resources/
+│   ├── js/               # JavaScript resources, if present
+│   ├── css/              # CSS resources, if present
+│   └── views/            # Blade templates
+├── routes/               # Application routes
+├── storage/              # Application storage
+├── tests/                # Automated tests, if present
+├── .env.example          # Environment template
+├── artisan               # Laravel CLI
+├── composer.json         # PHP dependency definitions
+└── README.md             # Project documentation
 ```
 
----
+## 🔐 Security
 
-## 🛠️ Useful Commands
+- Never commit `.env` or real credentials.
+- Keep API keys and passwords private.
+- Use `.env.example` to document required environment variables safely.
+- Protect administrative routes with appropriate authentication and authorization.
 
-```bash
-php artisan migrate:fresh --seed    # Reset the database and re-seed
-php artisan storage:link            # Re-create the storage symlink
-npm run dev                         # Vite dev server (hot reload)
-npm run build                       # Production asset build
-php artisan test                    # Run the test suite
-./vendor/bin/pint                   # Code style (Laravel Pint)
-```
+## 🛣️ Future Improvements
 
----
+Possible enhancements include:
+- Payment gateway integration.
+- Product search and filtering.
+- Wishlist functionality.
+- Inventory management.
+- Order confirmation emails.
+- Production deployment and automated testing.
 
-## 🔒 Security Notes
-
-- Never commit your `.env` file — it is already listed in `.gitignore`.
-- Set `APP_DEBUG=false` and `APP_ENV=production` in production.
-- Mail uses the `log` driver by default, so password-reset links are written to `storage/logs/laravel.log`. Configure a real mailer to send emails.
-
----
-## Author
+## 👨‍💻 Author
 
 **Janki Lodhari**
 
-GitHub: 432008
+GitHub: [@432008](https://github.com/432008)
 
-## Repository
+## 🔗 Repository
 
-View Aroma – Fine Fragrances on GitHub
+[github.com/432008/Aroma-Project](https://github.com/432008/Aroma-Project)
 
-Built with Laravel to deliver a refined online fragrance shopping experience.
+---
 
-## 📄 License
-
-Released under the [MIT License](https://opensource.org/licenses/MIT).
+<p align="center">
+  Made with ❤️ using Laravel
+</p>
