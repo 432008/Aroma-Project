@@ -14,7 +14,7 @@
             <!-- Perfume Logo -->
             <div class="about-hero-logo">
                 <img
-                    src="{{ asset('images/logo.png') }}"
+                    src="{{ asset('images/about/logo.png') }}"
                     alt="Perfume Logo"
                 >
             </div>
