@@ -10,13 +10,21 @@
 <section class="page-header">
     <div class="container">
         <div class="text-center">
-            <span class="section-subtitle">THE AROMA STORY</span>
+
+            <!-- Perfume Logo -->
+            <div class="about-hero-logo">
+                <img
+                    src="{{ asset('images/about/about_logo.png') }}"
+                    alt="Perfume Logo"
+                >
+            </div>
 
             <h1>About Aroma</h1>
 
             <p>
                 Crafting fragrances that become memories.
             </p>
+
         </div>
     </div>
 </section>
@@ -53,7 +61,6 @@
                 </div>
 
             </div>
-
 
             <div class="col-lg-6">
 
@@ -120,7 +127,6 @@
 
         </div>
 
-
         <div class="row g-4">
 
             <div class="col-lg-4">
@@ -143,7 +149,6 @@
 
             </div>
 
-
             <div class="col-lg-4">
 
                 <div class="about-feature text-center">
@@ -162,7 +167,6 @@
                 </div>
 
             </div>
-
 
             <div class="col-lg-4">
 
@@ -222,7 +226,6 @@
 
             </div>
 
-
             <div class="col-lg-6">
 
                 <div class="dark-info-card">
@@ -280,48 +283,32 @@
 
                     <div class="promise-item">
                         <i class="bi bi-check-circle"></i>
-
-                        <span>
-                            Premium fragrance compositions
-                        </span>
+                        <span>Premium fragrance compositions</span>
                     </div>
 
                     <div class="promise-item">
                         <i class="bi bi-check-circle"></i>
-
-                        <span>
-                            Elegant and thoughtful packaging
-                        </span>
+                        <span>Elegant and thoughtful packaging</span>
                     </div>
 
                     <div class="promise-item">
                         <i class="bi bi-check-circle"></i>
-
-                        <span>
-                            Carefully selected fragrance notes
-                        </span>
+                        <span>Carefully selected fragrance notes</span>
                     </div>
 
                     <div class="promise-item">
                         <i class="bi bi-check-circle"></i>
-
-                        <span>
-                            Secure and reliable delivery
-                        </span>
+                        <span>Secure and reliable delivery</span>
                     </div>
 
                     <div class="promise-item">
                         <i class="bi bi-check-circle"></i>
-
-                        <span>
-                            Customer-focused experience
-                        </span>
+                        <span>Customer-focused experience</span>
                     </div>
 
                 </div>
 
             </div>
-
 
             <div class="col-lg-6">
 
@@ -334,9 +321,7 @@
                         unforgettable impression.”
                     </blockquote>
 
-                    <span>
-                        — The Aroma Philosophy
-                    </span>
+                    <span>— The Aroma Philosophy</span>
 
                 </div>
 
