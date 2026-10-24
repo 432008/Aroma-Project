@@ -8,7 +8,7 @@
             //   'images/aroma-logo.png'       transparent, original colours  (current)
             //   'images/aroma-logo-gold.png'  transparent, gold
             //   'images/Aroma_logo-1.jpg'     original uploaded file
-            $navLogo = 'images/aroma-logo.png';
+            $navLogo = 'images/logo.png';
         @endphp
 
         <!-- Logo -->

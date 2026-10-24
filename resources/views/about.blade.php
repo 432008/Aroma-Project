@@ -11,11 +11,11 @@
     <div class="container">
         <div class="text-center">
 
-            <!-- Perfume Logo -->
+            <!-- Logo -->
             <div class="about-hero-logo">
                 <img
-                    src="{{ asset('images/about/logo.png') }}"
-                    alt="Perfume Logo"
+                    src="{{ asset('images/about/about_logo.png') }}"
+                    alt="Aroma Logo"
                 >
             </div>
 
