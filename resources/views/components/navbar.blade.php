@@ -12,19 +12,16 @@
         @endphp
 
         <!-- Logo -->
-        <a class="navbar-brand aroma-logo rounded-circle" href="{{ url('/') }}" aria-label="Aroma home">
+        <a class="navbar-brand aroma-logo" href="{{ url('/') }}" aria-label="Aroma home">
 
             <span class="aroma-logo-badge">
                 <img
                     src="{{ asset($navLogo) }}"
                     alt=""
                     class="aroma-logo-img"
-                    width="45"
-                    height="40"
-                    aria-hidden="true"
-                >
+                    aria-hidden="true">
             </span>
-
+            
             <span class="aroma-logo-text">AROMA</span>
 
         </a>

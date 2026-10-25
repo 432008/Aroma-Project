@@ -333,7 +333,8 @@ hr {
 .aroma-logo {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
+    margin-right: 0;
     font-family: 'Cormorant Garamond', serif;
     font-size: 36px;
     font-weight: 700;
@@ -343,32 +344,35 @@ hr {
     padding: 0;
 }
 
-/* White panel that makes a white-background logo clearly visible
-   against the dark navbar. Swap the image in components/navbar.blade.php. */
+/* Navbar logo */
 .aroma-logo-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    padding: 9px 16px;
-    background: #ffffff;
-    border-radius: 14px;
+    margin: 0;
+    padding: 0;
     line-height: 0;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-    transition: transform var(--aroma-transition), box-shadow var(--aroma-transition);
 }
 
 .aroma-logo-img {
     display: block;
-    width: auto;
-    height: 80px;
-    max-width: 300px;
+    width: 68px;
+    height: 68px;
+    max-width: 68px;
     object-fit: contain;
+    background: transparent;
+    transition: transform var(--aroma-transition), filter var(--aroma-transition);
 }
 
-.aroma-logo:hover .aroma-logo-badge {
+.aroma-logo:hover .aroma-logo-img {
     transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.38);
+    filter: drop-shadow(0 10px 24px rgba(201, 162, 39, 0.35));
+}
+
+.aroma-logo-text {
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .aroma-logo:hover {
@@ -2496,26 +2500,58 @@ hr {
    ABOUT
    ========================================================= */
 
+/* About Page Hero Logo - Rounded Circle with Glow Effect */
 .about-hero-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 24px;
-    width: clamp(90px, 12vw, 150px);
-    height: clamp(90px, 12vw, 150px);
-    padding: 16px;
-    background: radial-gradient(circle, rgba(201, 162, 39, 0.18) 0%, transparent 70%);
+    width: clamp(100px, 14vw, 160px);
+    height: clamp(100px, 14vw, 160px);
     border-radius: 50%;
+    position: relative;
+    padding: 4px;
+    background: linear-gradient(135deg, #c9a227 0%, #f0d98c 50%, #c9a227 100%);
+    box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.7);
+    animation: logoGlow 2.5s ease-in-out infinite;
+}
+
+.about-hero-logo::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    background: var(--aroma-charcoal);
+    z-index: 0;
 }
 
 .about-hero-logo img {
     display: block;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
     object-fit: contain;
-    filter: drop-shadow(0 12px 40px rgba(201, 162, 39, 0.25));
+    border-radius: 50%;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    transition: transform var(--aroma-transition), filter var(--aroma-transition);
+}
+
+.about-hero-logo:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 12px 40px rgba(201, 162, 39, 0.5));
+}
+
+@keyframes logoGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(201, 162, 39, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(201, 162, 39, 0);
+    }
 }
 
 .about-image {
@@ -3962,7 +3998,7 @@ hr {
     }
 
     .aroma-logo {
-        gap: 9px;
+        gap: 0;
     }
 
     .aroma-logo-text {
@@ -4091,20 +4127,14 @@ hr {
         letter-spacing: 5px;
     }
 
-    .aroma-logo-badge {
-        padding: 7px 12px;
-        border-radius: 10px;
-    }
-
     .aroma-logo-img {
         height: 56px;
         max-width: 210px;
     }
 
     .about-hero-logo {
-        width: clamp(76px, 18vw, 110px);
-        height: clamp(76px, 18vw, 110px);
-        padding: 12px;
+        width: clamp(80px, 20vw, 120px);
+        height: clamp(80px, 20vw, 120px);
         margin-bottom: 18px;
     }
 
